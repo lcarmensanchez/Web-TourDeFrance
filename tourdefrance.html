@@ -9,10 +9,28 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <style>
         .winners-title {
-                margin-top:10vh;
+                margin-top:8vh;
         }
         #result {
             margin-top: 3vh; 
+        }
+
+        select, option {
+          height: 40px;
+          width: 150px;
+          padding: 10px;
+          outline-color: #fadd00;
+        }
+
+        #generator_button {
+          background-color: black;
+          outline-color: #fadd00;
+          padding: 10px;
+          color: white;
+        }
+
+        .select {
+          padding-top: 20px;
         }
 
         body {
@@ -37,25 +55,46 @@
             font-size: 9px;
         }
 
-        @media (max-height: 500px) {
+        .result-padding{
+
+          padding: 5px;
+        }
+
+        @media screen and (max-height: 480px) {
            .footer {
               height: 10px;
            }
            .bylea {
             display: none;
           }
+          select, option {
+            background: #fcf4c1;
+            border:#fadd00;
+         }
+         .winners-title {
+                margin-top:2vh;
+        }
+
            
         }
 
-        @media (max-width: 500px) {
+        @media screen and (max-width: 480px) {
            .footer {
               height: 10px;
            }
            .bylea {
             display: none;
           }
+          select, option {
+            background: #fcf4c1;
+            border:#fadd00;
+         }    
+          .winners-title {
+                margin-top:2vh;
+        }
            
         }
+
         
         
         .app {
@@ -68,22 +107,25 @@
 
         </style>
     </head>
-<header></header>
+
 <body>
+    <header>
         <div class="header">
             <div class="container">
                 <div class="row col-xs-12"></div>
             </div>
         </div>
+    </header>
 
     <div class="container">
         <div class="row app">
                   <div class="text-center rounded">
                     <h2 class="winners-title"><span>Qui était le vainqueur du Tour de France l'année de votre naissance ?</span></h2>
                     <hr>
-                    <p>Indiquez votre date de naissance (elle ne sera enregistrée nulle part).<br> L’application vous révélera les maillots jaune, vert et à poids de votre année de naissance </p>
+                    <p>Indiquez votre date de naissance (elle ne sera enregistrée nulle part).<br> L’application vous indiquera les maillots jaune, vert et à poids de votre année de naissance. </p>
                     <hr>
-                    <select class="mb-2" name="year" id="year">
+                    <div class="select">
+                    <select class="sm-4" name="year" id="year">
                             <option value="2017">2017</option>
                             <option value="2016">2016</option>
                             <option value="2015">2015</option>
@@ -101,7 +143,7 @@
                             <option value="2003">2003</option>
                             <option value="2002">2002</option>
                             <option value="2001">2001</option>
-                            <option value="2000" selected>2000</option>
+                            <option value="2000">2000</option>
                             <option value="1999">1999</option>
                             <option value="1998">1998</option>
                             <option value="1997">1997</option>
@@ -133,7 +175,7 @@
                             <option value="1971">1971</option>
                             <option value="1970">1970</option>
                             <option value="1969">1969</option>
-                            <option value="1968">1968</option>
+                            <option value="1968" selected>1968</option>
                             <option value="1967">1967</option>
                             <option value="1966">1966</option>
                             <option value="1965">1965</option>
@@ -200,12 +242,13 @@
                             <option value="1905">1904</option>
                             <option value="1905">1903</option>
                     </select>
-                    <div><button class="mb-0" id="generator_button">Je veux savoir</button></div>
+                   <button class="sm-6" id="generator_button">Je veux savoir</button>
+                  </div>
                     <div id="result">
-                            <div id="result-winner"></div>
-                            <div id="result-climber"></div>
-                            <div id="result-sprinter"></div>
-                            <div id="other-result"></div>
+                            <div id="result-winner" class="result-padding"></div>
+                            <div id="result-climber" class="result-padding"></div>
+                            <div id="result-sprinter" class="result-padding"></div>
+                            <div id="other-result" class="result-padding"></div>
                     </div>
                 </div>
             </div>
@@ -932,25 +975,25 @@
             other_result.text("");
             // Maillot jaune
             if (data[year].Winner.name == 'd\u00e9sattribu\u00e9')
-                var content_winner = 'L\'américain Lance Armstrong a remporté sept Tours entre 1999 et 2005. Mais ils lui ont tous été retirés en 2012 par l\'Union cycliste internationale. Cette année-là, l\'Agence américaine antidopage (USADA) conclut en effet que le coureur a utilisé des substances dopantes pour améliorer ses performances sportives.';
+                var content_winner = 'Pas de vainqueur : l\'américain Lance Armstrong a remporté sept Tours entre 1999 et 2005. Mais ils lui ont été retirés en 2012 par l\'Union cycliste internationale. Cette année-là, l\'Agence américaine antidopage (USADA) conclut en effet que le coureur a utilisé des substances dopantes pour améliorer ses performances sportives.';
             else if (data[year].Winner.name != 'none' && data[year].Winner.nationality == "none")
-                var content_winner = 'En ' + year + ', le gagnant du Tour de France fut ' + data[year].Winner.name;
+                var content_winner = 'Gagnant du Tour de France : ' + data[year].Winner.name;
             else
-                var content_winner = 'En ' + year + ', le gagnant du Tour de France fut ' + data[year].Winner.name + ' (' + data[year].Winner.nationality + ')';
+                var content_winner = 'Gagnant du Tour de France : ' + data[year].Winner.name + ' (' + data[year].Winner.nationality + ')';
             result_winner.text(content_winner);
 
             // Best Climber
             if (data[year].Winner.name != 'none' && data[year].Climber.nationality == "none")
-                var content_climber = 'En ' + year + ', le meilleur grimpeur du Tour de France fut ' + data[year].Climber.name;
+                var content_climber = 'Meilleur grimpeur : ' + data[year].Climber.name;
             else
-                var content_climber = 'Le meilleur grimpeur du Tour de France fut ' + data[year].Climber.name + ' (' + data[year].Climber.nationality + ')';
+                var content_climber = 'Meilleur grimpeur : ' + data[year].Climber.name + ' (' + data[year].Climber.nationality + ')';
             result_climber.text(content_climber);
 
             // Best Sprinter
             if (year < 1953)
-                var content_sprinter = "Le  maillot vert n'a été créé qu\'en 1953, cinquante ans après le premier Tour de France.";
+                var content_sprinter = "Pas de meilleur sprinter : le  maillot vert n'a été créé qu\'en 1953, cinquante ans après le premier Tour de France.";
             else
-                var content_sprinter = 'Le meilleur sprinteur du Tour de France fut ' + data[year].Sprinter.name + ' (' + data[year].Sprinter.nationality + ')';
+                var content_sprinter = 'Meilleur sprinteur : ' + data[year].Sprinter.name + ' (' + data[year].Sprinter.nationality + ')';
             result_sprinter.text(content_sprinter);
         }
 
