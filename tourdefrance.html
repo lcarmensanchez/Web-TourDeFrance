@@ -11,7 +11,6 @@
         .winners-title {
                 margin-top:10vh;
         }
-
         #result {
             margin-top: 3vh; 
         }
@@ -28,10 +27,45 @@
             background: #fadd00;
             width: 100%;
             min-height: 21px;
-            position: absolute; 
+            position: fixed; 
             bottom: 0;
-            z-index:-1;
         }
+
+        .bylea {
+            text-align: center;
+            justify-content: center;
+            font-size: 9px;
+        }
+
+        @media (max-height: 500px) {
+           .footer {
+              height: 10px;
+           }
+           .bylea {
+            display: none;
+          }
+           
+        }
+
+        @media (max-width: 500px) {
+           .footer {
+              height: 10px;
+           }
+           .bylea {
+            display: none;
+          }
+           
+        }
+        
+        
+        .app {
+          overflow: visible;
+          min-height: 600px;
+          padding: 20px;
+        }
+        
+
+
         </style>
     </head>
 <header></header>
@@ -43,11 +77,12 @@
         </div>
 
     <div class="container">
-        <div class="row">
+        <div class="row app">
                   <div class="text-center rounded">
                     <h2 class="winners-title"><span>Qui était le vainqueur du Tour de France l'année de votre naissance ?</span></h2>
+                    <hr>
                     <p>Indiquez votre date de naissance (elle ne sera enregistrée nulle part).<br> L’application vous révélera les maillots jaune, vert et à poids de votre année de naissance </p>
-                  
+                    <hr>
                     <select class="mb-2" name="year" id="year">
                             <option value="2017">2017</option>
                             <option value="2016">2016</option>
@@ -178,12 +213,15 @@
       
 
     </div>
-    <footer>     <div class="footer">
-            <div class="container">
-                <div class="row col-xs-12"></div>
-            </div>
+    <footer>     
+      <div class="footer">
+        <div class="container">
+          <div class="row col-xs-12 bylea">
+            <p><br> by Léa Sanchez</p>
+          </div>
         </div>
-</footer>
+      </div>
+    </footer>
 </body>
 
 </html>
