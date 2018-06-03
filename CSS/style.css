@@ -1,0 +1,100 @@
+.winners-title {
+    margin-top:8vh;
+}
+
+#result {
+margin-top: 3vh; 
+}
+
+select, option {
+height: 40px;
+width: 150px;
+padding: 10px;
+outline-color: #fadd00;
+}
+
+#generator_button {
+background-color: black;
+outline-color: #fadd00;
+padding: 10px;
+color: white;
+}
+
+.select {
+padding-top: 20px;
+border-color: black;
+}
+
+body {
+background-color: white;
+}
+.header {
+background: #fadd00;
+min-height: 21px;
+width: 100%;
+}
+.footer {
+background: #fadd00;
+width: 100%;
+min-height: 21px;
+position: fixed; 
+bottom: 0;
+}
+
+.bylea {
+text-align: center;
+justify-content: center;
+font-size: 9px;
+}
+
+.result-padding{
+
+padding: 5px;
+}
+
+@media screen and (max-height: 480px) {
+.footer {
+  height: 10px;
+}
+.bylea {
+display: none;
+}
+select, option {
+background: #fcf4c1;
+border:#fadd00;
+}
+.winners-title {
+    margin-top:2vh;
+}
+
+
+}
+
+@media screen and (max-width: 480px) {
+.footer {
+  height: 10px;
+}
+.bylea {
+display: none;
+}
+select, option {
+background: #fcf4c1;
+border:#fadd00;
+}    
+.winners-title {
+    margin-top:2vh;
+}
+
+}
+
+
+
+.app {
+    justify-content: center;
+    text-align: center;
+overflow: visible;
+min-height: 600px;
+padding: 20px;
+}
+
+
