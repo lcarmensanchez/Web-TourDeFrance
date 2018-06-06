@@ -1,5 +1,25 @@
- 
     function searchInJson(year){
+
+      var jqxhr = $.getJSON( "./Resources/results2.json", function() {
+        console.log( "success" );
+      })
+        .done(function() {
+          console.log( "second success" );
+        })
+        .fail(function() {
+          console.log( "error" );
+        })
+        .always(function() {
+          console.log( "complete" );
+        });
+       
+      // Perform other work here ...
+       
+      // Set another completion function for the request above
+      jqxhr.complete(function() {
+        console.log( "second complete" );
+      });
+
         var data = {
             "1903": 
             {    
