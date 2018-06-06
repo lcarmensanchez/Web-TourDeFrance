@@ -22,13 +22,13 @@
 
     <div class="container">
         <div class="row app">
-                  <div class="text-center rounded">
-                    <h2 class="winners-title"><span>Qui était le vainqueur du Tour de France l'année de votre naissance ?</span></h2>
-                     <span class="author">App by Léa SANCHEZ (candidature pour Les Décodeurs du Monde)</span>
+                  <div class="text-center rounded col-xs-10">
+                    <h2 class="winners-title"><span>Qui était le vainqueur du Tour de France l'année de votre naissance ?
+                        <span></h2>
                     <hr>
-                    <p>Indiquez votre date de naissance (elle ne sera enregistrée nulle part).<br> L’application vous indiquera les maillots jaune, vert et à poids de votre année de naissance. </p>
+                    <p class="instructions">Indiquez votre date de naissance.<br> L’application vous indiquera les maillots jaune, vert et à poids de votre année de naissance. </p>
                     <hr>
-                    <div class="select">
+                    <div class="select ">
                     <select class="sm-4" name="year" id="year">
                             <option value="2017">2017</option>
                             <option value="2016">2016</option>
@@ -148,7 +148,7 @@
                     </select>
                    <button class="sm-6" id="generator_button">Je veux savoir</button>
                   </div>
-                    <div id="result">
+                    <div id="result" class="column">
                             <div id="winner" class="result-padding"></div>
                             <div id="climber" class="result-padding"></div>
                             <div id="sprinter" class="result-padding"></div>
@@ -162,7 +162,8 @@
     </div>
     <footer>     
       <div class="footer">
-        <div class="container">
+        <div class="container text_footer">
+            <span class="author">Par Léa SANCHEZ</span>
         </div>
       </div>
     </footer>
@@ -170,4 +171,5 @@
 
 </html>
 
-<script src="./Javascript/app_tour_generator.js"></script>
+<script type="text/javascript" src="./Javascript/app_tour_generator.js"></script>
+<script src="./Javascript/get_JSON.js"></script>
