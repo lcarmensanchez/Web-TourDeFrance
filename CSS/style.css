@@ -13,6 +13,10 @@ padding: 10px;
 outline-color: #fadd00;
 }
 
+.author  {
+fontsize:9px;
+}
+
 #generator_button {
 background-color: black;
 outline-color: #fadd00;
