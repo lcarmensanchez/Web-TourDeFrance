@@ -3,130 +3,123 @@
 }
 
 #result {
-margin-top: 3vh; 
+    margin-top: 3vh; 
 }
 
 select, option {
-height: 40px;
-width: 150px;
-padding: 10px;
-outline-color: #fadd00;
+    height: 40px;
+    width: 150px;
+    padding: 10px;
+    outline-color: #fadd00;
 }
 
 .text_footer {
-	padding:4px;
-justify-content: center;
+    padding:4px;
+    justify-content: center;
     text-align: center;
-font-size: 11px;
+    font-size: 10px;
 }
 
 #generator_button {
-background-color: black;
-outline-color: #fadd00;
-padding: 10px;
-color: white;
+    background-color: black;
+    outline-color: #fadd00;
+    padding: 10px;
+    color: white;
 }
 
-width: 100%;
-
 .select {
-padding-top: 20px;
-border-color: black;
+    padding-top: 20px;
+    border-color: black;
 }
 
 .header {
-width: 100%;
+    width: 100%;
 }
 
 body {
-background-color: white;
+    background-color: white;
 }
+
 .header {
-background: #fadd00;
-min-height: 21px;
-width: 100%;
+    background: #fadd00;
+    min-height: 21px;
+    width: 100%;
 }
+
 .footer {
-background: #fadd00;
-width: 100%;
-min-height: 22px;
-position: fixed; 
-bottom: 0;
+    background: #fadd00;
+    width: 100%;
+    min-height: 22px;
+    position: fixed; 
+    bottom: 0;
 }
 
-
-.result-padding{
-padding: 5px;
-}
-
-@media screen and (min-height: 900px) and (max-height: 1366px) {
 select, option {
-background: #fcf4c1;
-border:#fadd00;
-}
-.winners-title {
-    margin-top:10vh;
-    padding-left: 4vw;
-    padding-right: 4vw;
-    font-size:40px;
-}
-.instructions {
-    font-size: 25px;
+    background: #fcf4c1;
+    border:#fadd00;
 }
 
 .result-padding{
-font-size: 25px;
+    padding: 5px;
 }
-
-}
-select, option {
-background: #fcf4c1;
-border:#fadd00;
-}
-
-@media screen and (max-height: 480px) {
-.footer {
-  height: 11px;
-}
-select, option {
-background: #fcf4c1;
-border:#fadd00;
-}
-.winners-title {
-    margin-top:2vh;
-    font-size:30px;
-}
-.instructions, .result-padding{
-    font-size: 13px;
-}
-}
-
-@media screen and (max-width: 480px) {
-.footer {
-  height: 11px;
-}
-select, option {
-background: #fcf4c1;
-border:#fadd00;
-}    
-.winners-title {
-    margin-top:2vh;
-    font-size:30px;
-}
-.instructions, .result-padding{
-    font-size: 13px;
-}
-
-}
-
-
 
 .app {
     justify-content: center;
     text-align: center;
-overflow: visible;
-min-height: 600px;
-padding: 20px;
+    overflow: visible ;
+    min-height: 600px;
+    padding: 20px;
 }
 
+@media screen and (min-height: 900px) and (max-height: 1366px) {
+    select, option {
+        background: #fcf4c1;
+        border:#fadd00;
+    }
+    .winners-title {
+        margin-top:10vh;
+        padding-left: 4vw;
+        padding-right: 4vw;
+        font-size:40px;
+    }
+    .instructions {
+        font-size: 25px;
+    }
+    .result-padding{
+        font-size: 25px;
+    }
+}
 
+@media screen and (max-height: 480px) {
+    .footer {
+        height: 11px;
+    }
+    select, option {
+        background: #fcf4c1;
+        border:#fadd00;
+    }
+    .winners-title {
+        margin-top:2vh;
+        font-size:30px;
+    }
+    .instructions, .result-padding{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer {
+        height: 11px;
+    }
+    select, option {
+        background: #fcf4c1;
+        border:#fadd00;
+    }    
+    .winners-title {
+        margin-top:2vh;
+        font-size:30px;
+    }
+    .instructions, .result-padding{
+        font-size: 13px;
+    }
+}

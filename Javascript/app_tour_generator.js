@@ -1,5 +1,4 @@
-
-   function searchInJson(year){
+function searchInJson(year){
   		var data = getJSON()
         $('#winner').html("");
         $('#climber').html("");
@@ -25,7 +24,6 @@
         else if (year >= 2017 || year < 1903) 
             $('#other-result').html("H\u00e9las, le Tour de France n'a eu lieu qu'entre 1903 et 2017.");
     }
-
     $( "#generator_button" ).click(function() {
         searchInJson($( "#year" ).val());
     });
