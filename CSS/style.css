@@ -78,7 +78,7 @@ select, option {
 .app {
     justify-content: center;
     text-align: center;
-    overflow: none;
+    overflow: visible ;
     min-height: 600px;
     padding: 20px;
 }
