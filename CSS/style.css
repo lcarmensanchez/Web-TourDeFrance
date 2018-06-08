@@ -3,7 +3,7 @@
 }
 
 #result {
-    margin-top: 3vh; 
+    margin-top: 6vh; 
 }
 
 /* .container {
@@ -42,10 +42,11 @@ select, option {
 
 .img {
     margin-right: 10px;
-    width: 30px;
+    width: 25px;
 }
 
 body {
+    height: 100%;
     background-color: white;
 }
 
@@ -77,7 +78,7 @@ select, option {
 .app {
     justify-content: center;
     text-align: center;
-    overflow: visible ;
+    overflow: none;
     min-height: 600px;
     padding: 20px;
 }
@@ -116,6 +117,9 @@ select, option {
     .instructions, .result-padding{
         font-size: 13px;
     }
+    #result {
+        margin-top: 4vh; 
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -137,7 +141,7 @@ select, option {
         font-size: 13px;
     }
     #result {
-        margin-top: 2vh; 
+        margin-top: 4vh; 
     }
     .app {
         justify-content: center;
