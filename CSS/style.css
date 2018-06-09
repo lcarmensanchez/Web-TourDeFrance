@@ -1,18 +1,11 @@
 .winners-title {
+    max-width: 800px;
     margin-top:13vh;
 }
 
 #result {
     margin-top: 6vh; 
 }
-
-/* .container {
-    margin-top:auto;
-    margin-bottom:auto;
-    vertical-align:middle;
-    margin-left: auto;
-    margin-right: auto;
-} */
 
 select, option {
     height: 40px;
@@ -46,7 +39,7 @@ select, option {
 }
 
 body {
-    height: 100%;
+    justify-content: center;
     background-color: white;
 }
 
@@ -100,6 +93,10 @@ select, option {
     .result-padding{
         font-size: 25px;
     }
+    .app-container {
+        margin-top: 6vh; 
+    }
+    
 }
 
 @media screen and (max-height: 480px) {
@@ -119,6 +116,9 @@ select, option {
     }
     #result {
         margin-top: 4vh; 
+    }
+    .app-container {
+        margin-top: 2.5vh; 
     }
 }
 
@@ -149,5 +149,8 @@ select, option {
         overflow: visible ;
         min-height: 400px;
         padding: 20px;
+    }
+    .app-container {
+        margin-top: 1vh; 
     }
 }
