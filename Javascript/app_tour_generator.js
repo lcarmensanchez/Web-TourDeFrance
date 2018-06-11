@@ -26,7 +26,7 @@ function searchInJson(year){
             $('#other-result').html(msg["WW"].first);
         else if (year >= 1940 && year <= 1946) 
             $('#other-result').html(msg["WW"].second);
-        showExplanations()
+        showExplanations();
 }
 
     
@@ -62,7 +62,7 @@ function showExplanations(){
             });
         });   
 }  
-
+    showExplanations()
     $( "#generator_button" ).click(function() {
         searchInJson($( "#year" ).val());
     });
