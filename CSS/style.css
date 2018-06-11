@@ -1,10 +1,13 @@
 .winners-title {
     max-width: 800px;
-    margin-top:13vh;
 }
 
 #result {
     margin-top: 6vh; 
+}
+
+.app-container {
+    margin-top: 25vh; 
 }
 
 select, option {
@@ -76,27 +79,15 @@ select, option {
     padding: 20px;
 }
 
-@media screen and (min-height: 900px) and (max-height: 1366px) {
+@media screen and (max-height: 1366px) {
     select, option {
         background: #fcf4c1;
         border:#fadd00;
     }
     .winners-title {
-        margin-top:14vh;
         padding-left: 4vw;
         padding-right: 4vw;
-        font-size:40px;
-    }
-    .instructions {
-        font-size: 25px;
-    }
-    .result-padding{
-        font-size: 25px;
-    }
-    .app-container {
-        margin-top: 6vh; 
-    }
-    
+    }    
 }
 
 @media screen and (max-height: 480px) {
@@ -108,7 +99,6 @@ select, option {
         border:#fadd00;
     }
     .winners-title {
-        margin-top:10vh;
         font-size:30px;
     }
     .instructions, .result-padding{
@@ -116,9 +106,6 @@ select, option {
     }
     #result {
         margin-top: 4vh; 
-    }
-    .app-container {
-        margin-top: 2.5vh; 
     }
 }
 
@@ -134,7 +121,6 @@ select, option {
         border:#fadd00;
     }    
     .winners-title {
-        margin-top:7vh;
         font-size:27px;
     }
     .instructions, .result-padding{
@@ -151,6 +137,6 @@ select, option {
         padding: 20px;
     }
     .app-container {
-        margin-top: 1vh; 
+        margin-top: 15vh; 
     }
 }
