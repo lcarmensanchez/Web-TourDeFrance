@@ -27,16 +27,16 @@ function searchInJson(year){
         else if (year >= 1940 && year <= 1946) 
             $('#other-result').html("De 1940 à 1946, il n'y a pas eu de Tour de France à cause de la Seconde Guerre mondiale.");
         if (('img' in window || (window.DocumentTouch && document instanceof DocumentTouch))) {
-             $('img').bind('touchstart', function(){
-                  if (this.id == "maillot_jaune")
+             $('div').bind('touchstart', function(){
+                  if (this.id == "winner")
                     $('#explanations').html("<p class='explanations'>Depuis 1919, le coureur en tête du classement général du Tour porte le maillot jaune. Le classement est obtenu en cumulant les temps réalisés sur chaque étape par chacun des participants.</p>");
-                else if (this.id == "maillot_pois")
+                else if (this.id == "climber")
                     $('#explanations').html("<p class='explanations'>Lorsqu'ils franchissent des passages escarpés comme des cols, les coureurs gagnent des points. Le meilleur grimpeur remporte le Grand Prix de la montagne et arbore un maillot blanc à pois rouges.</p>"); 
-                else if (this.id == "maillot_vert")
+                else if (this.id == "sprinter")
                      $('#explanations').html("<p class='explanations'>Le maillot vert a été créé en 1953. Lors du sprint final de chaque étape, les coureurs remportent des points variant selon leur classement. Celui qui atteint la première place revêt le maillot vert.</p>");
         });
               };
-        $('img').bind('touchend', function(){
+        $('div').bind('touchend', function(){
             $('#explanations').html("");
         });
 
