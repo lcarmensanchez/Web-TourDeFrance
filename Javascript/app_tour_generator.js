@@ -26,6 +26,7 @@ function searchInJson(year){
             $('#other-result').html(msg["WW"].first);
         else if (year >= 1940 && year <= 1946) 
             $('#other-result').html(msg["WW"].second);
+        $('html,body').animate({scrollTop: $("#other-result").offset().top}, 'slow');
         showExplanations();
 }
 
@@ -42,10 +43,7 @@ function showExplanations(){
                 else if (this.id == "maillot_vert")
                      $('#explanations').html(msg["explanations"].vert);
         });
-              };
-        $('div').bind('touchend', function(){
-            $('#explanations').html("");
-        });
+        };
 
         $(document).ready(function(){
             $("img").hover(function(){
