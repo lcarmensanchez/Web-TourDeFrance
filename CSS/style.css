@@ -1,9 +1,9 @@
 .winners-title {
-    max-width: 800px;
+    max-width: 1000px;
 }
 
 #result {
-    margin-top: 6vh; 
+    margin-top: 3vh; 
 }
 
 .app-container {
@@ -105,7 +105,7 @@ select, option {
         font-size: 13px;
     }
     #result {
-        margin-top: 4vh; 
+        margin-top: 3vh; 
     }
 }
 
@@ -127,7 +127,7 @@ select, option {
         font-size: 13px;
     }
     #result {
-        margin-top: 4vh; 
+        margin-top: 3vh; 
     }
     .app {
         justify-content: center;
