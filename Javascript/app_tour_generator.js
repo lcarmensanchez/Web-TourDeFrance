@@ -26,16 +26,22 @@ function searchInJson(year){
             $('#other-result').html("De 1915 à 1918, il n'y a pas eu de Tour de France à cause de la Première Guerre mondiale.");
         else if (year >= 1940 && year <= 1946) 
             $('#other-result').html("De 1940 à 1946, il n'y a pas eu de Tour de France à cause de la Seconde Guerre mondiale.");
-        $(document).ready(function(){
-            $("img").hover(function(){
-                if (this.id == "maillot_jaune")
+        if (('img' in window || (window.DocumentTouch && document instanceof DocumentTouch))) {
+             $('img').bind('touchstart', function(){
+                  if (this.id == "maillot_jaune")
                     $('#explanations').html("<p class='explanations'>Depuis 1919, le coureur en tête du classement général du Tour porte le maillot jaune. Le classement est obtenu en cumulant les temps réalisés sur chaque étape par chacun des participants.</p>");
                 else if (this.id == "maillot_pois")
                     $('#explanations').html("<p class='explanations'>Lorsqu'ils franchissent des passages escarpés comme des cols, les coureurs gagnent des points. Le meilleur grimpeur remporte le Grand Prix de la montagne et arbore un maillot blanc à pois rouges.</p>"); 
                 else if (this.id == "maillot_vert")
                      $('#explanations').html("<p class='explanations'>Le maillot vert a été créé en 1953. Lors du sprint final de chaque étape, les coureurs remportent des points variant selon leur classement. Celui qui atteint la première place revêt le maillot vert.</p>");
-            });
-            $("img").click(function(){
+        });
+              };
+        $('img').bind('touchend', function(){
+            $('#explanations').html("");
+        });
+
+        $(document).ready(function(){
+            $("img").hover(function(){
                 if (this.id == "maillot_jaune")
                     $('#explanations').html("<p class='explanations'>Depuis 1919, le coureur en tête du classement général du Tour porte le maillot jaune. Le classement est obtenu en cumulant les temps réalisés sur chaque étape par chacun des participants.</p>");
                 else if (this.id == "maillot_pois")
@@ -46,8 +52,9 @@ function searchInJson(year){
             $("img").mouseleave(function(){
                 $('#explanations').html("");
             });
-    });
+        });     
     }
+
 
     $( "#generator_button" ).click(function() {
         searchInJson($( "#year" ).val());

@@ -9,7 +9,8 @@
 }
 
 .app-container {
-    margin-top: 18vh; 
+    margin-top: 16vh; 
+    margin-bottom: 2vh;
 }
 
 select, option {
