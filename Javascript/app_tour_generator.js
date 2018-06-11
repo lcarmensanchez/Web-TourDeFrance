@@ -32,7 +32,6 @@ function searchInJson(year){
     
 function showExplanations(){
     var msg = getMessages();
-    $('#explanations').html("");
     if (('img' in window || (window.DocumentTouch && document instanceof DocumentTouch))) {
              $('div').bind('touchstart', function(){
                  $('html,body').animate({scrollTop: $("#explanations").offset().top}, 'slow');
