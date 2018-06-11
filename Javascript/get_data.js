@@ -3,26 +3,25 @@ function getMessages(){
   {
             "WW": 
             {    
-                "first": "De 1915 à 1918, il n'y a pas eu de Tour de France à cause de la Première Guerre mondiale."},
-                "second": "De 1940 à 1946, il n'y a pas eu de Tour de France à cause de la Seconde Guerre mondiale."}
+                "first": { "msg": "De 1915 à 1918, il n'y a pas eu de Tour de France à cause de la Première Guerre mondiale."},
+                "second": {"msg": "De 1940 à 1946, il n'y a pas eu de Tour de France à cause de la Seconde Guerre mondiale."}
             },
             "explanations":
             {
-              "jaune": "<p class='explanations'>Depuis 1919, le coureur en tête du classement général du Tour porte le maillot jaune. Le classement est obtenu en cumulant les temps réalisés sur chaque étape par chacun des participants.</p>",
-              "pois" : "<p class='explanations'>Lorsqu'ils franchissent des passages escarpés comme des cols, les coureurs gagnent des points. Le meilleur grimpeur remporte le Grand Prix de la montagne et arbore un maillot blanc à pois rouges.</p>",
-              "vert": "<p class='explanations'>Le maillot vert a été créé en 1953. Lors du sprint final de chaque étape, les coureurs remportent des points variant selon leur classement. Celui qui atteint la première place revêt le maillot vert.</p>"
+              "jaune": {"msg": "<p class='explanations'>Depuis 1919, le coureur en tête du classement général du Tour porte le maillot jaune. Le classement est obtenu en cumulant les temps réalisés sur chaque étape par chacun des participants.</p>"},
+              "pois" : {"msg": "<p class='explanations'>Lorsqu'ils franchissent des passages escarpés comme des cols, les coureurs gagnent des points. Le meilleur grimpeur remporte le Grand Prix de la montagne et arbore un maillot blanc à pois rouges.</p>"},
+              "vert": {"msg": "<p class='explanations'>Le maillot vert a été créé en 1953. Lors du sprint final de chaque étape, les coureurs remportent des points variant selon leur classement. Celui qui atteint la première place revêt le maillot vert.</p>"}
             },
             "exceptions":
             {
-              "sprinter": "Pas de meilleur sprinter : le maillot vert n'a été créé qu\'en 1953, cinquante ans après le premier Tour de France.",
-              "Armstrong": " Pas de vainqueur : l\'américain Lance Armstrong a remport\u00e9 sept Tours entre 1999 et 2005. Mais ils lui ont été retirés en 2012 par l\'Union cycliste internationale. Cette année-là, l\'Agence américaine antidopage (USADA) conclut en effet que le coureur a utilisé des substances dopantes pour améliorer ses performances sportives.",
-
-            }
+              "sprinter": {"msg": "Pas de meilleur sprinter : le maillot vert n'a été créé qu\'en 1953, cinquante ans après le premier Tour de France."},
+              "Armstrong": {"msg": " Pas de vainqueur : l\'américain Lance Armstrong a remport\u00e9 sept Tours entre 1999 et 2005. Mais ils lui ont été retirés en 2012 par l\'Union cycliste internationale. Cette année-là, l\'Agence américaine antidopage (USADA) conclut en effet que le coureur a utilisé des substances dopantes pour améliorer ses performances sportives."}
+            },
             "img":
             {
-              "climber": '<img class="img" src="./Resources/img/MAILLOTAPOIS.png" id="maillot_pois" />',
-              "sprinter": '<img class="img" id="maillot_vert" src="./Resources/img/MAILLOTVERT.png" />',
-              "winner": "<img class='img' id='maillot_jaune' src='./Resources/img/MAILLOTJAUNE.png' />",
+              "climber": {"msg": '<img class="img" src="./Resources/img/MAILLOTAPOIS.png" id="maillot_pois" />'},
+              "sprinter": {"msg": '<img class="img" id="maillot_vert" src="./Resources/img/MAILLOTVERT.png" />'},
+              "winner": {"msg": "<img class='img' id='maillot_jaune' src='./Resources/img/MAILLOTJAUNE.png' />"}
 
             }
         };
