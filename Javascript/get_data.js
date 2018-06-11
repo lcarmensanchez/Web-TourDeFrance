@@ -1,5 +1,5 @@
 function getMessages(){
-  var data =
+  var messages =
   {
             "WW": 
             {    
@@ -26,7 +26,7 @@ function getMessages(){
 
             }
     };
-  return(data);
+  return(messages);
 }
 
 function getJSON(){

@@ -1,12 +1,11 @@
 function searchInJson(year){
-      var data = getJSON()
-      var msg = getMessages()
+      var data = getJSON();
+      var msg = getMessages();
       
         $('#winner').html("");
         $('#climber').html("");
         $('#sprinter').html("");
         $('#other-result').html("");
-        $('#explanations').html("");
 
         if ((year >= 1903 && year < 1915) || (year > 1918 && year < 1940) || (year > 1946 && year <= 2017))  {
             if (data[year].Winner.name == 'd\u00e9sattribu\u00e9'){
@@ -28,11 +27,13 @@ function searchInJson(year){
         else if (year >= 1940 && year <= 1946) 
             $('#other-result').html(msg["WW"].second);
         showExplanations()
-    }
+}
 
+    
 function showExplanations(){
-var msg = getMessages()
-  if (('img' in window || (window.DocumentTouch && document instanceof DocumentTouch))) {
+    var msg = getMessages();
+    $('#explanations').html("");
+    if (('img' in window || (window.DocumentTouch && document instanceof DocumentTouch))) {
              $('div').bind('touchstart', function(){
                  $('html,body').animate({scrollTop: $("#explanations").offset().top}, 'slow');
                  if (this.id == "maillot_jaune")
@@ -66,4 +67,5 @@ var msg = getMessages()
     $( "#generator_button" ).click(function() {
         searchInJson($( "#year" ).val());
     });
+    
 
