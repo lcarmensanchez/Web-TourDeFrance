@@ -34,6 +34,7 @@ function showExplanations(){
 var msg = getMessages()
   if (('img' in window || (window.DocumentTouch && document instanceof DocumentTouch))) {
              $('div').bind('touchstart', function(){
+                 $('html,body').animate({scrollTop: $("#explanations").offset().top}, 'slow');
                  if (this.id == "maillot_jaune")
                     $('#explanations').html(msg["explanations"].jaune);
                 else if (this.id == "maillot_pois")
@@ -48,6 +49,7 @@ var msg = getMessages()
 
         $(document).ready(function(){
             $("img").hover(function(){
+                 $('html,body').animate({scrollTop: $("#explanations").offset().top}, 'slow');
                 if (this.id == "maillot_jaune")
                     $('#explanations').html(msg["explanations"].jaune);
                 else if (this.id == "maillot_pois")
