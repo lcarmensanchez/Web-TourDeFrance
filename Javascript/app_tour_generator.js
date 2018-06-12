@@ -27,42 +27,14 @@ function searchInJson(year){
         else if (year >= 1940 && year <= 1946) 
             $('#other-result').html(msg["WW"].second);
         $('html,body').animate({scrollTop: $("#other-result").offset().top}, 'slow');
-        showExplanations();
 }
 
-    
-function showExplanations(){
-    var msg = getMessages();
-    if (('img' in window || (window.DocumentTouch && document instanceof DocumentTouch))) {
-             $('div').bind('touchstart', function(){
-                 $('html,body').animate({scrollTop: $("#explanations").offset().top}, 'slow');
-                 if (this.id == "maillot_jaune")
-                    $('#explanations').html(msg["explanations"].jaune);
-                else if (this.id == "maillot_pois")
-                     $('#explanations').html(msg["explanations"].pois);
-                else if (this.id == "maillot_vert")
-                     $('#explanations').html(msg["explanations"].vert);
-        });
-        };
-
-        $(document).ready(function(){
-            $("img").hover(function(){
-                 $('html,body').animate({scrollTop: $("#explanations").offset().top}, 'slow');
-                if (this.id == "maillot_jaune")
-                    $('#explanations').html(msg["explanations"].jaune);
-                else if (this.id == "maillot_pois")
-                     $('#explanations').html(msg["explanations"].pois);
-                else if (this.id == "maillot_vert")
-                     $('#explanations').html(msg["explanations"].vert);
-            });
-            $("img").mouseleave(function(){
-                $('#explanations').html("");
-            });
-        });   
-}  
-    showExplanations()
     $( "#generator_button" ).click(function() {
         searchInJson($( "#year" ).val());
     });
+
+    $( "#year" ).change(function() {
+        searchInJson($( "#year" ).val());
+});
     
 
