@@ -28,8 +28,10 @@ function searchInJson(year){
             $('#other-result').html(msg["WW"].first);
         else if (year >= 1940 && year <= 1946) 
             $('#other-result').html(msg["WW"].second);
+        else 
+            $('#other-result').html(msg["exceptions"].error);
         $('html,body').animate({scrollTop: $("#other-result").offset().top}, 'slow');
-}
+    }
 
 $( "#generator_button" ).click(function() {
     searchInJson($( "#year" ).val());
