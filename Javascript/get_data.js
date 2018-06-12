@@ -8,6 +8,7 @@ function getMessages(){
             },
             "exceptions":
             {
+              "climber": 'Pas de meilleur grimpeur : ce n\'est qu\'en 1933 que le magazine L\'Auto commencera à attribuer de manière non officielle le titre de "meilleur grimpeur"',
               "sprinter": "Pas de meilleur sprinter : le maillot vert n'a été créé qu\'en 1953, cinquante ans après le premier Tour de France.",
               "Armstrong": " Pas de vainqueur : l\'américain Lance Armstrong a remport\u00e9 sept Tours entre 1999 et 2005. Mais ils lui ont été retirés en 2012 par l\'Union cycliste internationale. Cette année-là, l\'Agence américaine antidopage (USADA) conclut en effet que le coureur a utilisé des substances dopantes pour améliorer ses performances sportives.",
 
@@ -17,7 +18,6 @@ function getMessages(){
               "climber": '<img class="img" src="./Resources/img/MAILLOTAPOIS.png" id="maillot_pois" />',
               "sprinter": '<img class="img" id="maillot_vert" src="./Resources/img/MAILLOTVERT.png" />',
               "winner": "<img class='img' id='maillot_jaune' src='./Resources/img/MAILLOTJAUNE.png' />",
-
             }
     };
   return(messages);

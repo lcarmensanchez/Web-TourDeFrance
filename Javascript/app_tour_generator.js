@@ -14,8 +14,10 @@ function searchInJson(year){
             else {
 				$('#winner').html('<a> Gagnant du Tour de France : <b>' + data[year].Winner.name + '</b> (' + data[year].Winner.nationality + ')</a>');
 				$('#winner').prepend(msg["img"].winner)
-			}
-			if (data[year].Winner.name != 'none' && data[year].Climber.nationality != "none")
+            }
+            if (year < 1905)
+                $('#climber').html(msg["exceptions"].climber);
+			else if (data[year].Winner.name != 'none' && data[year].Climber.nationality != "none")
                 $('#climber').html(msg["img"].climber + 'Meilleur grimpeur : <b>' + data[year].Climber.name + '</b> (' + data[year].Climber.nationality + ')');
             if (year < 1953)
                 $('#sprinter').html(msg["exceptions"].sprinter);
@@ -29,12 +31,6 @@ function searchInJson(year){
         $('html,body').animate({scrollTop: $("#other-result").offset().top}, 'slow');
 }
 
-    $( "#generator_button" ).click(function() {
-        searchInJson($( "#year" ).val());
-    });
-
-    $( "#year" ).change(function() {
-        searchInJson($( "#year" ).val());
+$( "#generator_button" ).click(function() {
+    searchInJson($( "#year" ).val());
 });
-    
-
