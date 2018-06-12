@@ -9,7 +9,7 @@
 }
 
 .app-container {
-    margin-top: 16vh; 
+    margin-top: 14vh; 
     margin-bottom: 2vh;
 }
 
@@ -124,6 +124,9 @@ select, option {
     #result {
         margin-top: 3vh; 
     }
+    .app-container {
+        margin-top: 7vh; 
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -154,6 +157,6 @@ select, option {
         padding: 20px;
     }
     .app-container {
-        margin-top: 8vh; 
+        margin-top: 7vh; 
     }
 }
