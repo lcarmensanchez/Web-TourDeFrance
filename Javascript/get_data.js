@@ -8,8 +8,8 @@ function getMessages(){
             },
             "exceptions":
             {
-              "climber": 'Pas de meilleur grimpeur : ce n\'est qu\'en 1933 que le magazine L\'Auto commencera à attribuer de manière non officielle le titre de "meilleur grimpeur".',
-              "sprinter": "Pas de meilleur sprinter : le maillot vert n'a été créé qu\'en 1953, cinquante ans après le premier Tour de France.",
+              "climber": 'Pas de meilleur grimpeur : ce n\'est qu\'en 1933 qu\'est créé le "Grand Prix de la montagne" qui le récompense officiellement.',
+              "sprinter": "Pas de meilleur sprinter : le maillot vert n'apparaît qu\'en 1953, cinquante ans après le premier Tour de France.",
               "Armstrong": " Pas de vainqueur : l\'américain Lance Armstrong a remport\u00e9 sept Tours entre 1999 et 2005. Mais ils lui ont été retirés en 2012 par l\'Union cycliste internationale. Cette année-là, l\'Agence américaine antidopage (USADA) conclut en effet que le coureur a utilisé des substances dopantes pour améliorer ses performances sportives.",
               "Kohl" : "Bernhard Kohl a été contrôlé positivement aux tests antidopages et déclassé. La première place du classement du meilleur grimpeur revient par conséquent à ",
               "Pellizotti" : "Franco Pellizotti a été contrôlé positivement aux tests antidopages et déclassé. La première place du classement du meilleur grimpeur revient par conséquent à ",
@@ -43,13 +43,13 @@ function getJSON(){
             "1905":
             {
                 "Winner": {"name": "Louis Trousselier", "nationality": "France"},
-                "Climber" : {"name": "Ren\u00e9 Cottier", "nationality": "France"},
+                "Climber" : {"name": "Ren\u00e9 Pottier", "nationality": "France"},
                 "Sprinter": {"name": "none", "nationality": "none"}
             },
             "1906":
             {
                 "Winner": {"name": "Ren\u00e9 Pottier", "nationality": "France"},
-                "Climber" : {"name": "Ren\u00e9 Cottier", "nationality": "France"},
+                "Climber" : {"name": "Ren\u00e9 Pottier", "nationality": "France"},
                 "Sprinter": {"name": "none", "nationality": "none"}
             },
             "1907":

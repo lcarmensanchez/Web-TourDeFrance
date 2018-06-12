@@ -15,7 +15,7 @@ function searchInJson(year){
 				$('#winner').html('<a> Gagnant du Tour de France : <b>' + data[year].Winner.name + '</b> (' + data[year].Winner.nationality + ')</a>');
 				$('#winner').prepend(msg["img"].winner)
             }
-            if (year < 1905)
+            if (year < 1933)
                 $('#climber').html(msg["exceptions"].climber);
             else if (year == 2008)
                 $('#climber').html(msg["exceptions"].Kohl + '<b>' + data[year].Climber.name + '</b> (' + data[year].Climber.nationality + ')');
