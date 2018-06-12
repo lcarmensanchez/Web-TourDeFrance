@@ -17,6 +17,10 @@ function searchInJson(year){
             }
             if (year < 1905)
                 $('#climber').html(msg["exceptions"].climber);
+            else if (year == 2008)
+                $('#climber').html(msg["exceptions"].Kohl + '<b>' + data[year].Climber.name + '</b> (' + data[year].Climber.nationality + ')');
+            else if (year == 2009)
+                $('#climber').html(msg["exceptions"].Pellizotti + '<b>' + data[year].Climber.name + '</b> (' + data[year].Climber.nationality + ')');
 			else if (data[year].Winner.name != 'none' && data[year].Climber.nationality != "none")
                 $('#climber').html(msg["img"].climber + 'Meilleur grimpeur : <b>' + data[year].Climber.name + '</b> (' + data[year].Climber.nationality + ')');
             if (year < 1953)
