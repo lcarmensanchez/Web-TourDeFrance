@@ -13,7 +13,7 @@ function getMessages(){
               "Armstrong": " Pas de vainqueur : l\'américain Lance Armstrong a remport\u00e9 sept Tours entre 1999 et 2005. Mais ils lui ont été retirés en 2012 par l\'Union cycliste internationale. Cette année-là, l\'Agence américaine antidopage (USADA) conclut en effet que le coureur a utilisé des substances dopantes pour améliorer ses performances sportives.",
               "Kohl" : "Bernhard Kohl a été contrôlé positivement aux tests antidopages et déclassé. La première place du classement du meilleur grimpeur revient par conséquent à ",
               "Pellizotti" : "Franco Pellizotti a été contrôlé positivement aux tests antidopages et déclassé. La première place du classement du meilleur grimpeur revient par conséquent à ",
-              "error" : "Le Tour de France n'a eu lieu que de 1903 à 2017. Pour les enfants nés en 2018, il va falloir attendre la prochaine édition..."
+              "error" : "Le Tour de France n'a pour l'instant eu lieu que de 1903 à 2017. Pour les enfants nés en 2018, il va falloir attendre la prochaine édition..."
             },
             "img":
             {
