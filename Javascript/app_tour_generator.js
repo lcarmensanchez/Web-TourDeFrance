@@ -30,7 +30,8 @@ function searchInJson(year){
             $('#other-result').html(msg["WW"].second);
         else 
             $('#other-result').html(msg["exceptions"].error);
-        $('html,body').animate({scrollTop: $("#other-result").offset().top}, 'slow');
+        if  ($( window ).height() <= 800)
+            $('html,body').animate({scrollTop: $("#other-result").offset().top}, 'slow');
     }
 
 $( "#generator_button" ).click(function() {

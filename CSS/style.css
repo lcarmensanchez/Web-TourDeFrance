@@ -44,6 +44,7 @@ select, option {
 }
 
 body {
+    height: 95%;
     justify-content: center;
     background-color: white;
 }
@@ -91,7 +92,6 @@ select, option, input {
     justify-content: center;
     text-align: center;
     overflow: visible ;
-    min-height: 600px;
     padding: 20px;
 }
 
