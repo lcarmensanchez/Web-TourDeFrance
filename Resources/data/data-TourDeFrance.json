@@ -14,13 +14,13 @@
     "1905":
     {
         "Winner": {"name": "Louis Trousselier", "nationality": "France"},
-        "Climber" : {"name": "Ren\u00e9 Cottier", "nationality": "France"},
+        "Climber" : {"name": "Ren\u00e9 Pottier", "nationality": "France"},
         "Sprinter": {"name": "none", "nationality": "none"}
     },
     "1906":
     {
         "Winner": {"name": "Ren\u00e9 Pottier", "nationality": "France"},
-        "Climber" : {"name": "Ren\u00e9 Cottier", "nationality": "France"},
+        "Climber" : {"name": "Ren\u00e9 Pottier", "nationality": "France"},
         "Sprinter": {"name": "none", "nationality": "none"}
     },
     "1907":
