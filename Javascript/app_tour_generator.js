@@ -8,13 +8,14 @@ function searchInJson(year){
         $('#other-result').html("");
 
         if ((year >= 1903 && year < 1915) || (year > 1918 && year < 1940) || (year > 1946 && year <= 2017))  {
-            if (data[year].Winner.name == 'd\u00e9sattribu\u00e9'){
+
+            // Winner 
+            if (data[year].Winner.name == 'd\u00e9sattribu\u00e9')
                 $('#winner').html(msg["exceptions"].Armstrong);
-            }
-            else {
-				$('#winner').html('<a> Gagnant du Tour de France : <b>' + data[year].Winner.name + '</b> (' + data[year].Winner.nationality + ')</a>');
-				$('#winner').prepend(msg["img"].winner)
-            }
+            else 
+                $('#winner').html(msg["img"].winner + '<a> Gagnant du Tour de France : <b>' + data[year].Winner.name + '</b> (' + data[year].Winner.nationality + ')</a>');
+                
+            // Climber 
             if (year < 1933)
                 $('#climber').html(msg["exceptions"].climber);
             else if (year == 2008)
@@ -23,6 +24,8 @@ function searchInJson(year){
                 $('#climber').html(msg["exceptions"].Pellizotti + '<b>' + data[year].Climber.name + '</b> (' + data[year].Climber.nationality + ')');
 			else if (data[year].Winner.name != 'none' && data[year].Climber.nationality != "none")
                 $('#climber').html(msg["img"].climber + 'Meilleur grimpeur : <b>' + data[year].Climber.name + '</b> (' + data[year].Climber.nationality + ')');
+
+            // Sprinter
             if (year < 1953)
                 $('#sprinter').html(msg["exceptions"].sprinter);
             else
@@ -34,8 +37,9 @@ function searchInJson(year){
             $('#other-result').html(msg["WW"].second);
         else 
             $('#other-result').html(msg["exceptions"].error);
-        var height = $(window).height();
-        if (height < 768)
+        
+        // Scroll
+        if ($(window).height() < 768)
             $('html,body').animate({scrollTop: $("#year").offset().top}, 'slow');
     }
 
